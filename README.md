@@ -1,4 +1,4 @@
-## Get the excerpt of posts and pages
+## Get the excerpt of your posts
 
 Using *more tag* to get a excerpt of **your posts** content.
 
