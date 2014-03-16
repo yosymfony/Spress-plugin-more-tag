@@ -55,9 +55,7 @@ blogs sites**.
 --more--
 
 Your post can be write in Markdown and your templates are
-writing with [Twig](http://twig.sensiolabs.org/documentation). If you want know more about
-Markdown, see 
-[Markdown Cheatsheet by Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+writing with [Twig](http://twig.sensiolabs.org/documentation).
 ```
 
 ```
@@ -71,7 +69,5 @@ blogs sites**.
 --more More information--
 
 Your post can be write in Markdown and your templates are
-writing with [Twig](http://twig.sensiolabs.org/documentation). If you want know more about
-Markdown, see 
-[Markdown Cheatsheet by Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+writing with [Twig](http://twig.sensiolabs.org/documentation).
 ```
