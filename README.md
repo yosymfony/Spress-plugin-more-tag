@@ -1,6 +1,6 @@
-## Get the excerpt of your posts
+## Get the excerpt of your blog entries
 
-Using *more tag* to get a excerpt of **your posts** content.
+You can use *more tag* to get a excerpt of your blog entries.
 
 **Require**:
 * Spress >= 1.0.1
@@ -19,7 +19,7 @@ Go to your Spress site and add the following to your `composer.json` and run
 ### How to use?
 
 In Markdown syntax you can use `--more--` or `--more <your-more-label>--` 
-like `--more More information-- to get a excerpt of your content. The content
+like `--more More information-- to get a excerpt of your blog entries. The content
 located before of *more tag* will be a excerpt. The more tag require a new line
 at the end:
 
