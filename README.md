@@ -23,19 +23,22 @@ like `--more More information-- to get a excerpt of your content. The content
 located before of *more tag* will be a excerpt. The more tag require a new line
 at the end:
 
-This is wrong:
+This is **wrong**:
+
 ```
 Your main text
 --more-- Explain text
 ```
 
 **How to use in a template?**
+
 Two additional variables is availables:
 
-* page.excerpt: The excerpt content.
-* page.excerpt_label: The value of <your-more-label>.
+* `page.excerpt`: The excerpt content.
+* `page.excerpt_label`: The value of <your-more-label>.
 
 In your pagination template:
+
 ```
 {% for post in paginator.posts %}
     {{ post.excerpt }}
