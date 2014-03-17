@@ -29,7 +29,7 @@ Your main text
 --more-- Explain text
 ```
 
-** How to uses in a template?
+**How to use in a template?**
 Two additional variables is availables:
 
 * page.excerpt: The excerpt content.
@@ -57,6 +57,8 @@ blogs sites**.
 Your post can be write in Markdown and your templates are
 writing with [Twig](http://twig.sensiolabs.org/documentation).
 ```
+
+Example 2:
 
 ```
 ---
