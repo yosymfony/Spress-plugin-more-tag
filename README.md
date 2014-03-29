@@ -3,7 +3,7 @@
 You can use *more tag* to get a excerpt of your blog entries.
 
 **Require**:
-* Spress >= 1.0.1
+* Spress >= 1.0.2
 
 ### How to install?
 
@@ -30,9 +30,9 @@ Your main text
 --more-- Explain text
 ```
 
-**How to use in a template?**
+**How to use in the template?**
 
-Two additional variables is availables:
+Two additional variables are availables only in pagination time (**pagination template**):
 
 * `page.excerpt`: The excerpt content.
 * `page.excerpt_label`: The value of <your-more-label>.
@@ -43,6 +43,20 @@ In your pagination template:
 {% for post in paginator.posts %}
     {{ post.excerpt }}
     <a href="{{ site.url }}{{ post.url }}">{{ post.excerpt_label }}</a>
+{% endfor %}
+```
+
+If you have a page like RSS or similar, you can access to posts excerpt using `site.posts_excerpts`:
+
+```
+{% for post in site.posts | slice(0, site.max_item, true) %}
+    <item>
+        <title>{{ post.title }}</title>
+        <description><![CDATA[{{ site.posts_excerpts[post.id].value }}]]></description>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <pubDate>{{ post.date | date("D, d M Y H:i:s O") }}</pubDate>
+        <guid>{{ site.url }}{{ post.url }}</guid>
+    </item>
 {% endfor %}
 ```
 
