@@ -52,7 +52,7 @@ class SpressMoreTag extends Plugin
         }
         
         $result = preg_split($this->patternsHtml, $payloadContent, 2);
-        $this->postsExcerpt[$event->getId()] = ['value' => $result[0], 'label' => $label];
+        $this->postsExcerpt[$event->getId()] = ['value' => rtrim($result[0], '<p>'), 'label' => $label];
         $this->configRepository['posts_excerpts'] = $this->postsExcerpt;
         
         $event->setContent(preg_replace($this->patternsHtml, '', $content));
