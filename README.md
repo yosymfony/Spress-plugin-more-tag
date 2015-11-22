@@ -32,9 +32,9 @@ Your main text
 --more-- Explain text
 ```
 
-**How to use in the template?**
+**The template side**
 
-This plugin provides some Twig filters and one test to hanle excerpt concern:
+This plugin provides some Twig filters and one test to handle excerpt concern:
 
 * `excerpt` filter gets the excerpt of content. `{{ post.content | excerpt }}`.
 * `content` filter gets the content without more tag text. `{{ post.content | content }}`.
