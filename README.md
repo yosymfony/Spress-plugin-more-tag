@@ -1,18 +1,20 @@
-## Get the excerpt of your blog entries
+## Get the excerpt of your content
 
-You can use *more tag* to get a excerpt of your blog entries.
+![Spress 2 ready](https://img.shields.io/badge/Spress%202-ready-brightgreen.svg)
 
-**Require**:
-* Spress >= 1.0.2
+You can use *more tag* to get a excerpt of your content like blog entries.
+
+**Requires**:
+* Spress >= 2.0
 
 ### How to install?
 
 Go to your Spress site and add the following to your `composer.json` and run 
 `composer update`:
 
-```
+```json
 "require": {
-    "yosymfony/spress-plugin-more-tag": "~1.0"
+    "yosymfony/spress-plugin-more-tag": "2.0.*"
 }
 ```
 
@@ -25,43 +27,23 @@ at the end:
 
 This is **wrong**:
 
-```
+```markdown
 Your main text
 --more-- Explain text
 ```
 
 **How to use in the template?**
 
-Two additional variables are availables only in pagination time (**pagination template**):
+This plugin provides some Twig filters and one test to hanle excerpt concern:
 
-* `page.excerpt`: The excerpt content.
-* `page.excerpt_label`: The value of <your-more-label>.
-
-In your pagination template:
-
-```
-{% for post in paginator.posts %}
-    {{ post.excerpt }}
-    <a href="{{ site.url }}{{ post.url }}">{{ post.excerpt_label }}</a>
-{% endfor %}
-```
-
-If you have a page like RSS or similar, you can access to posts excerpt using `site.posts_excerpts`:
-
-```
-{% for post in site.posts | slice(0, site.max_item, true) %}
-    <item>
-        <title>{{ post.title }}</title>
-        <description><![CDATA[{{ site.posts_excerpts[post.id].value }}]]></description>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <pubDate>{{ post.date | date("D, d M Y H:i:s O") }}</pubDate>
-        <guid>{{ site.url }}{{ post.url }}</guid>
-    </item>
-{% endfor %}
-```
+* `excerpt` filter gets the excerpt of content. `{{ post.content | excerpt }}`.
+* `content` filter gets the content without more tag text. `{{ post.content | content }}`.
+* `excerpt_label` filter gets the label associated to more tag text.
+* `with_excerpt` test lets you check if a variable has the more tag text.
 
 #### Examples
-```
+
+```markdown
 ---
 layout: default
 ---
@@ -77,7 +59,7 @@ writing with [Twig](http://twig.sensiolabs.org/documentation).
 
 Example 2:
 
-```
+```markdown
 ---
 layout: default
 ---

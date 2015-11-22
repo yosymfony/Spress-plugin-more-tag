@@ -12,13 +12,12 @@
         }
     ],
     "require": {
-        "yosymfony/spress-installer": "~1.0"
+        "yosymfony/spress-installer": "2.0.*@dev"
     },
     "extra": {
-        "spress_name": "Spress-plugin-more-tag",
         "spress_class": "SpressPlugins\\SpressMoreTag\\SpressMoreTag",
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         }
     },
     "autoload": {
