@@ -4,8 +4,8 @@
 
 You can use *more tag* to get a excerpt of your content like blog entries.
 
-**Requires**:
-* Spress >= 2.0
+**This plugin requires Spress >= 2.0**. If you are using Spress 1.x, go to [1.0.1](https://github.com/yosymfony/Spress-plugin-more-tag/releases/tag/v1.0.1) version of the theme.
+
 
 ### How to install?
 
